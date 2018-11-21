@@ -10,3 +10,5 @@ echo "Installing .zshrc..."
 ln -svf "$DOTFILES_DIR/.zshrc" ~
 echo "Installing .lambdadotfiles/..."
 ln -svf "$DOTFILES_DIR/.lambdadotfiles/" ~
+echo "Installing .vimrc..."
+ln -svf "$DOTFILES_DIR/.vimrc" ~
