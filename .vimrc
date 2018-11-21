@@ -131,7 +131,7 @@ set bg=dark
 " Enable 256 color (if supported)
 set t_Co=256
 
-"colorscheme distinguished
+colorscheme hybrid
 set background=dark
 " set cc=80
 
@@ -442,9 +442,9 @@ nmap <F5> :w<CR>
 nmap <F6> :q!<CR>:q!<CR>:q!<CR>:q!<CR>:q!<CR>:q!<CR>:q!<CR>
 nmap <F7> :wq<CR>
 nmap <F8> :wq<CR>:q!<CR>:q!<CR>:q!<CR>:q!<CR>:q!<CR>:q!<CR>
-imap <F5> <Esc>:q!
+imap <F4> <ESC>:q!
+imap <F5> <Esc>:w<CR>
 imap <F6> <Esc>:q!<CR>:q!<CR>:q!<CR>:q!<CR>:q!<CR>:q!<CR>:q!<CR>
-imap <F4> <Esc>:w<CR>
 imap <F7> <Esc>:wq<CR>
 imap <F8> <Esc>:wq<CR>:q!<CR>:q!<CR>:q!<CR>:q!<CR>:q!<CR>:q!<CR>
 
