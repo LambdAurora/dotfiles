@@ -1,8 +1,8 @@
 ############################################################
 ############################################################
-###							 ###
-###		    LambdAurora's .zshrc		 ###
-###							 ###
+###                                                      ###
+###                LambdAurora's .zshrc                  ###
+###                                                      ###
 ############################################################
 ############################################################
 
@@ -10,10 +10,10 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/lambdaurora/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Theme
-ZSH_THEME="agnoster_lambda"
+ZSH_THEME="lambdaurora"
 
 # Options
 #ENABLE_CORRECTION="true"
