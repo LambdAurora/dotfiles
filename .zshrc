@@ -54,6 +54,12 @@ export WINEARCH='win32'
 ## Common
 export USER_HOME=$HOME
 
+# Check if gnome-terminal exists, if it exists it will define $TERMINAL variable.
+if (( $+commands[gnome-terminal] ))
+then
+	export TERMINAL='gnome-terminal'
+fi
+
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
