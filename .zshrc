@@ -64,7 +64,7 @@ fi
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 ## Aliases
-. ./.lambdadotfiles/aliases
+. ~/.lambdadotfiles/aliases
 
 # Other
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
