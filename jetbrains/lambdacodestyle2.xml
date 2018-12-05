@@ -1,0 +1,13 @@
+<code_scheme name="Default" version="173">
+  <MarkdownNavigatorCodeStyleSettings>
+    <option name="RIGHT_MARGIN" value="72" />
+  </MarkdownNavigatorCodeStyleSettings>
+  <Objective-C>
+    <option name="GENERATE_COMPARISON_OPERATORS_USE_STD_TIE" value="true" />
+  </Objective-C>
+  <codeStyleSettings language="ObjectiveC">
+    <indentOptions>
+      <option name="USE_TAB_CHARACTER" value="true" />
+    </indentOptions>
+  </codeStyleSettings>
+</code_scheme>
