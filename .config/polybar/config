@@ -26,6 +26,7 @@ foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
+random = #99FF99
 
 [bar/lambda]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -33,8 +34,8 @@ width = 100%
 height = 27
 ;offset-x = 1%
 ;offset-y = 1%
-radius = 6.0
-fixed-center = false
+;radius = 6.0
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -42,8 +43,8 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 4
-border-color = #00000000
+;border-size = 4
+;border-color = #00000000
 
 padding-left = 0
 padding-right = 2
@@ -54,10 +55,14 @@ module-margin-right = 2
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
+font-3 = Inconsolata:pixelsize=10;1
+font-4 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
+font-5 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
+font-6 = "Font Awesome 5 Brands:pixelsize=10;1"
 
 modules-left = bspwm i3
-modules-center = 
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
+modules-center = date clock 
+modules-right = xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -223,11 +228,20 @@ type = internal/network
 interface = wlp4s0
 interval = 3.0
 
-format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
-label-connected = %essid%
+format-connected-prefix = " "
+format-connected-prefix-font = 4
+format-connected-prefix-foreground = ${colors.random}
 
-format-disconnected =
+format-connected = <ramp-signal> <label-connected>
+;format-connected-underline = #9f78e1
+
+label-connected = %essid%
+label-connected-foreground = ${colors.random}
+label-connected-font = 3
+
+format-disconnected-prefix = " "
+format-disconnected-prefix-foreground = ${colors.random}
+format-disconnected = ""
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
@@ -256,6 +270,19 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
+[module/clock]
+type = internal/date
+interval = 1
+
+time = %H:%M:%S
+
+format-prefix = "  "
+format-prefix-foreground = ${colors.random}
+;format-underline = #0a6cf5
+
+label = %time%
+label-font = 4
+
 [module/date]
 type = internal/date
 interval = 5
@@ -266,7 +293,7 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
@@ -333,25 +360,62 @@ battery = BAT1
 adapter = ACAD
 full-at = 98
 
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+; COLORS
+color-alert       = #ff5555
+color-warning     = ${colors.random}
+color-charging    = #FACC40
+color-discharging = ${colors.random}
+color-full        = ${colors.random}
 
-format-discharging = <animation-discharging> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+; PREFIX
+;format-charging-prefix = ""
+;format-charging-prefix-font = 4
+;format-charging-prefix-foreground = ${self.color-charging}
 
-format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+;format-discharging-prefix = "BAT "
+;format-discharging-prefix-font = 4
+;format-discharging-prefix-foreground = ${self.color-discharging}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+;format-full-prefix = "BAT "
+;format-full-prefix-font = 4
+;format-full-prefix-foreground = ${self.color-full}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-foreground = ${colors.foreground-alt}
+; FORMAT 
+format-charging    = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full        = <ramp-capacity> <label-full>
+
+; UNDERLINE
+;format-charging-underline = ${self.color-charging}
+;format-discharging-underline = ${self.color-discharging}
+;format-full-underline = ${self.color-full}
+
+; LABEL
+label-charging = %percentage:3%%
+label-charging-font = 4
+
+label-discharging = %percentage:3%%
+label-discharging-font = 4
+
+label-full = %percentage:3%%
+label-full-font = 4
+
+; BATTERY CAPACITY RAMP
+ramp-capacity-0 = 
+ramp-capacity-0-foreground = ${self.color-alert}
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-4-foreground = ${self.color-full}
+ramp-capacity-foreground = ${self.color-discharging}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-foreground = ${self.color-charging}
 animation-charging-framerate = 750
 
 animation-discharging-0 = 

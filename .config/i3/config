@@ -9,6 +9,19 @@
 ###### Style
 # Font used in i3.
 font pango:monospace 8
+## Colors
+set $color #65BEB1
+set $rcolo #FFFFFF
+set $bg    #262626
+set $bg_in #404040
+## Borders
+# Class 				Border	Background	Text	Indicator	Child_border
+client.focused 			$bg		$bg 		$rcolo 	$color 		$color
+client.focused_inactive $bg		$bg			$color	$bg			$bg_in
+client.unfocused		$bg		$bg			$color	$bg			$bg_in
+client.urgent			$bg		$bg			$color	$bg			$bg_in
+client.placeholder		$bg		$bg			$color	$bg			$bg_in
+client.background		#FFFFFF
 
 ###### i3-gaps
 gaps inner 10
