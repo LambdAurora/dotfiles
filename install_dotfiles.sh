@@ -31,6 +31,11 @@ tmp_ln "$DOTFILES_DIR/.vimrc" ~
 mkdir -p ~/.vim/colors
 tmp_ln "$DOTFILES_DIR/.vim/colors/hybrid.vim" ~/.vim/colors
 
+# Install configuration files for Compton.
+echo "Installing Compton configuration files..."
+mkdir -p ~/.config/compton
+tmp_ln "$DOTFILES_DIR/.config/compton/config" ~/.config/compton
+
 # Install configuration files for i3.
 echo "Installing i3 configuration files..."
 mkdir -p ~/.config/i3
