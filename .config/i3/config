@@ -49,6 +49,7 @@ set $ws9 "9"
 set $ws10 "10"
 
 #### Automatic software execution
+exec_always --no-startup-id $HOME/.lambdadotfiles/launch_compton.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 ###### Shortcuts
