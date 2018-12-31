@@ -1,4 +1,5 @@
 <code_scheme name="LambdaCodeStyle2" version="173">
+  <option name="LINE_SEPARATOR" value="&#xA;" />
   <option name="RIGHT_MARGIN" value="180" />
   <MarkdownNavigatorCodeStyleSettings>
     <option name="RIGHT_MARGIN" value="72" />
@@ -9,6 +10,8 @@
     <option name="GENERATE_COMPARISON_OPERATORS_USE_STD_TIE" value="true" />
   </Objective-C>
   <codeStyleSettings language="ObjectiveC">
+    <option name="BLANK_LINES_BEFORE_IMPORTS" value="0" />
+    <option name="BLANK_LINES_AFTER_IMPORTS" value="0" />
     <option name="CLASS_BRACE_STYLE" value="2" />
     <indentOptions>
       <option name="USE_TAB_CHARACTER" value="true" />
