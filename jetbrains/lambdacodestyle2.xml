@@ -1,6 +1,9 @@
 <code_scheme name="LambdaCodeStyle2" version="173">
   <option name="LINE_SEPARATOR" value="&#xA;" />
   <option name="RIGHT_MARGIN" value="180" />
+  <JSCodeStyleSettings version="0">
+    <option name="FUNCTION_EXPRESSION_BRACE_STYLE" value="2" />
+  </JSCodeStyleSettings>
   <MarkdownNavigatorCodeStyleSettings>
     <option name="RIGHT_MARGIN" value="72" />
   </MarkdownNavigatorCodeStyleSettings>
@@ -9,6 +12,16 @@
     <option name="FUNCTION_BRACE_PLACEMENT" value="2" />
     <option name="GENERATE_COMPARISON_OPERATORS_USE_STD_TIE" value="true" />
   </Objective-C>
+  <codeStyleSettings language="HTML">
+    <indentOptions>
+      <option name="INDENT_SIZE" value="2" />
+      <option name="TAB_SIZE" value="2" />
+    </indentOptions>
+  </codeStyleSettings>
+  <codeStyleSettings language="JavaScript">
+    <option name="CLASS_BRACE_STYLE" value="2" />
+    <option name="METHOD_BRACE_STYLE" value="2" />
+  </codeStyleSettings>
   <codeStyleSettings language="ObjectiveC">
     <option name="BLANK_LINES_BEFORE_IMPORTS" value="0" />
     <option name="BLANK_LINES_AFTER_IMPORTS" value="0" />
