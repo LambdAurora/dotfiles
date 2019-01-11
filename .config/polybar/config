@@ -241,7 +241,7 @@ label-connected-font = 3
 
 format-disconnected-prefix = " "
 format-disconnected-prefix-foreground = ${colors.random}
-format-disconnected = ""
+format-disconnected = "Disconnected"
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
