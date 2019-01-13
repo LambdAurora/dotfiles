@@ -29,7 +29,6 @@
     <option name="BLANK_LINES_BEFORE_IMPORTS" value="0" />
     <option name="BLANK_LINES_AFTER_IMPORTS" value="0" />
     <option name="CLASS_BRACE_STYLE" value="2" />
-    <option name="ALIGN_GROUP_FIELD_DECLARATIONS" value="true" />
     <indentOptions>
       <option name="USE_TAB_CHARACTER" value="true" />
     </indentOptions>
