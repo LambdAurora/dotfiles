@@ -1,11 +1,14 @@
 ############################################################
 ############################################################
-###							 ###
-###		    LambdAurora's Aliases		 ###
-###							 ###
+###                                                      ###
+###               LambdAurora's Aliases                  ###
+###                                                      ###
 ############################################################
 ############################################################
 
 alias cls="clear"
 alias home="cd ~"
 alias cd..="cd .."
+alias gadd="git add ."
+alias gpush="git push origin master"
+alias gpull="git pull origin master"
