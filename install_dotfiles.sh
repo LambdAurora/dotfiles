@@ -5,11 +5,13 @@ echo "Installing dotfiles..."
 # Get current dir
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 alias tmp_ln="ln -sf"
+alias tmp_dir_ln="ln -sfd"
 for param in "$*"
 do
 	if [[ $param == "--verbose" ]] || [[ $param == "-v" ]]
 	then
 		alias tmp_ln="ln -svf"
+        alias tmp_dir_ln="ln -svfd"
 	fi
 done
 
@@ -30,6 +32,10 @@ echo "Installing vim configuration files..."
 tmp_ln "$DOTFILES_DIR/.vimrc" ~
 mkdir -p ~/.vim/colors
 tmp_ln "$DOTFILES_DIR/.vim/colors/hybrid.vim" ~/.vim/colors
+mkdir -p ~/.vim/autoload
+tmp_ln "$DOTFILES_DIR/.vim/autoload/pathogen.vim" ~/.vim/autoload
+mkdir -p ~/.vim/bundle
+tmp_dir_ln "$DOTFILES_DIR/.vim/bundle/nerdtree/" ~/.vim/bundle
 
 # Install configuration files for Compton.
 echo "Installing Compton configuration files..."
