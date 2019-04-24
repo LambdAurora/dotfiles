@@ -19,6 +19,7 @@ done
 
 echo "Installing common dotfiles..."
 mkdir -p ~/.config
+tmp_ln "$DOTFILES_DIR/.config/redshift.conf" ~/.config
 tmp_ln "$DOTFILES_DIR/.lambdadotfiles/" ~
 
 # Install configuration files for the shell.

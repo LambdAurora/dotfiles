@@ -22,7 +22,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 
 # Plugins
-plugins=(encode64 git git_remote_branch zsh-syntax-highlighting)
+plugins=(encode64 git)
 
 
 # User configuration
