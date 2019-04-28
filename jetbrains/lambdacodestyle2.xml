@@ -35,5 +35,6 @@
   <codeStyleSettings language="ObjectiveC">
     <option name="BLANK_LINES_BEFORE_IMPORTS" value="0" />
     <option name="BLANK_LINES_AFTER_IMPORTS" value="0" />
+    <option name="CLASS_BRACE_STYLE" value="2" />
   </codeStyleSettings>
 </code_scheme>
