@@ -66,6 +66,12 @@ fi
 ## Aliases
 . ~/.lambdadotfiles/aliases
 
+[[ "$DISPLAY" && -z "$de" ]] && type -p xprop &>/dev/null && de="$(xprop -root | awk '/KDE_SESSION_VERSION/')"
+
+case $de in
+    "KDE_SESSION_VERSION"*) . ~/.lambdadotfiles/plasmautils ;;
+esac
+
 # Other
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then

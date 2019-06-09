@@ -43,6 +43,9 @@ echo "Installing Compton configuration files..."
 mkdir -p ~/.config/compton
 tmp_ln "$DOTFILES_DIR/.config/compton/config" ~/.config/compton
 
+# Install KDE stuff.
+
+
 # Install configuration files for i3.
 echo "Installing i3 configuration files..."
 mkdir -p ~/.config/i3

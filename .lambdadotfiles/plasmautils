@@ -1,16 +1,15 @@
 ############################################################
 ############################################################
 ###                                                      ###
-###               LambdAurora's Aliases                  ###
+###             LambdAurora's KDE utilities              ###
 ###                                                      ###
 ############################################################
 ############################################################
 
-alias cls="clear"
-alias home="cd ~"
-alias cd..="cd .."
-alias gadd="git add ."
-alias gstat="git status"
-alias gcommit="git commit -S -m "
-alias gpush="git push origin master"
-alias gpull="git pull origin master"
+# Restart the KDE taskbar.
+function kde_restart_taskbar
+{
+    killall plasmashell
+    plasmashell &
+}
+
