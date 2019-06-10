@@ -25,7 +25,6 @@
   </codeStyleSettings>
   <codeStyleSettings language="JavaScript">
     <option name="CLASS_BRACE_STYLE" value="2" />
-    <option name="METHOD_BRACE_STYLE" value="2" />
     <indentOptions>
       <option name="INDENT_SIZE" value="2" />
       <option name="CONTINUATION_INDENT_SIZE" value="2" />
