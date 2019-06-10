@@ -10,6 +10,6 @@
 function kde_restart_taskbar
 {
     killall plasmashell
-    plasmashell &
+    kstart5 plasmashell
 }
 
