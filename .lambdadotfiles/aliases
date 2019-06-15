@@ -16,4 +16,5 @@ alias gpush="git push origin master"
 alias gpushdev="git push origin dev"
 alias gpull="git pull origin master"
 alias gpulldev="git pull origin dev"
+alias rofi="~/.lambdadotfiles/plasma_rofi"
 

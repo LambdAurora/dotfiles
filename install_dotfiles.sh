@@ -56,4 +56,9 @@ mkdir -p ~/.config/polybar
 tmp_ln "$DOTFILES_DIR/.config/polybar/config" ~/.config/polybar
 tmp_ln "$DOTFILES_DIR/.config/polybar/launch.sh" ~/.config/polybar
 
+echo "Installing rofi configuration files..."
+mkdir -p ~/.config/rofi
+tmp_ln "$DOTFILES_DIR/.config/rofi/config" ~/.config/rofi
+tmp_ln "$DOTFILES_DIR/.config/rofi/lambdaurora.rasi" ~/.config/rofi
+
 unalias tmp_ln

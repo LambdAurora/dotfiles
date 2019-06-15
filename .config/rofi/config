@@ -1,0 +1,3 @@
+rofi.theme: ~/.config/rofi/lambdaurora.rasi
+rofi.modi: drun,run,window,ssh
+
