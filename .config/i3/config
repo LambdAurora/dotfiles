@@ -22,6 +22,8 @@ client.unfocused		$bg		$bg			$color	$bg			$bg_in
 client.urgent			$bg		$bg			$color	$bg			$bg_in
 client.placeholder		$bg		$bg			$color	$bg			$bg_in
 client.background		#FFFFFF
+# Wallpapers
+exec_always --no-startup-id feh --bg-fill $HOME/.wallpapers/19-05-30--02-2.8_4k.png
 
 ###### i3-gaps
 gaps inner 10
@@ -54,17 +56,18 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 ###### Shortcuts
 # Start a terminal.
-bindsym $alt+Control+t exec gnome-terminal
+bindsym $alt+Control+t exec konsole
 
 # Kill focused window.
 bindsym $alt+F4 kill
 
-# Start dmenu (a program launcher).
-bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# Start rofi (a program launcher).
+bindsym $mod+d exec rofi -show drun
+bindsym $mod+r exec rofi -show run
+bindsym $mod+Tab exec rofi -show window
+
+# Screenshots (flameshot)
+bindsym Control+Shift+apostrophe exec flameshot gui
 
 ## Change focus.
 bindsym $mod+j focus left
@@ -172,4 +175,4 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+Control+r mode "resize"

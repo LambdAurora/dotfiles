@@ -1,0 +1,15 @@
+!! Appearance
+urxvt*foreground: #dcdcdc
+urxvt.background: rgba:0000/2b2b/3636/dddd
+urxvt.depth: 32
+
+!! Font preferences
+urxvt.font: xft:Source Code Pro:pixelsize=11:weight=regular
+urxvt.boldFont: xft:Source Code Pro:pixelsize=11:weight=bold
+
+!! Scrollbar
+urxvt.scrollBar: false
+
+urxvt.urlLauncher: /usr/bin/firefox
+urxvt.matcher.button: C1
+

@@ -21,6 +21,7 @@ echo "Installing common dotfiles..."
 mkdir -p ~/.config
 tmp_ln "$DOTFILES_DIR/.config/redshift.conf" ~/.config
 tmp_ln "$DOTFILES_DIR/.lambdadotfiles/" ~
+tmp_ln "$DOTFILES_DIR/.wallpapers/" ~
 
 # Install configuration files for the shell.
 echo "Installing zsh configuration files..."
@@ -56,9 +57,15 @@ mkdir -p ~/.config/polybar
 tmp_ln "$DOTFILES_DIR/.config/polybar/config" ~/.config/polybar
 tmp_ln "$DOTFILES_DIR/.config/polybar/launch.sh" ~/.config/polybar
 
+# Install configuration files for rofi.
 echo "Installing rofi configuration files..."
 mkdir -p ~/.config/rofi
 tmp_ln "$DOTFILES_DIR/.config/rofi/config" ~/.config/rofi
 tmp_ln "$DOTFILES_DIR/.config/rofi/lambdaurora.rasi" ~/.config/rofi
+
+# Install Xresources files.
+echo "Installing some other configuration files..."
+tmp_ln "$DOTFILES_DIR/.Xdefaults" ~
+tmp_ln "$DOTFILES_DIR/.xdefaults/" ~
 
 unalias tmp_ln
