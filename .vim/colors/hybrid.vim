@@ -275,7 +275,7 @@ exe "hi! WarningMsg"    .s:fg_red         .s:bg_none        .s:fmt_none
 
 " Use Xresources for background colour
 if has('gui_running') || g:hybrid_use_Xresources != 1
-  exe "hi! Normal"        .s:fg_foreground  .s:bg_background  .s:fmt_none
+  exe "hi! Normal"        .s:fg_foreground  .s:bg_none  .s:fmt_none
 else
   exe "hi! Normal"        .s:fg_foreground  .s:bg_none        .s:fmt_none
 endif

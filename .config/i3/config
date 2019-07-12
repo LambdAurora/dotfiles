@@ -53,6 +53,7 @@ set $ws10 "10"
 #### Automatic software execution
 exec_always --no-startup-id $HOME/.lambdadotfiles/launch_compton.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id sudo xrandr --output HDMI-0 --primary --left-of DVI-D-0
 
 ###### Shortcuts
 # Start a terminal.

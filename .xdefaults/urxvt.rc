@@ -1,6 +1,6 @@
 !! Appearance
 urxvt*foreground: #dcdcdc
-urxvt.background: rgba:0000/2b2b/3636/dddd
+urxvt.background: rgba:0000/1515/2222/aaaa
 urxvt.depth: 32
 
 !! Font preferences
