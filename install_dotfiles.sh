@@ -19,6 +19,7 @@ done
 
 echo "Installing common dotfiles..."
 mkdir -p ~/.config
+mkdir -p ~/.config/autostart-scripts
 tmp_ln "$DOTFILES_DIR/.config/redshift.conf" ~/.config
 tmp_ln "$DOTFILES_DIR/.lambdadotfiles/" ~
 tmp_ln "$DOTFILES_DIR/.wallpapers/" ~
@@ -43,6 +44,7 @@ tmp_dir_ln "$DOTFILES_DIR/.vim/bundle/nerdtree/" ~/.vim/bundle
 echo "Installing Compton configuration files..."
 mkdir -p ~/.config/compton
 tmp_ln "$DOTFILES_DIR/.config/compton/config" ~/.config/compton
+tmp_ln "$DOTFILES_DIR/.lambdadotfiles/launch_compton.sh" ~/.config/autostart-scripts
 
 # Install KDE stuff.
 ## Install konsole stuff.
