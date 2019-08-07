@@ -48,7 +48,9 @@ tmp_ln "$DOTFILES_DIR/.config/compton/config" ~/.config/compton
 ## Install konsole stuff.
 echo "Installing konsole configuration files..."
 tmp_ln "$DOTFILES_DIR/.config/konsolerc" ~/.config
-tmp_ln "$DOTFILES_DIR/.local/share/konsole/*" ~/.local/share/konsole
+mkdir -p ~/.local/share/konsole
+tmp_ln "$DOTFILES_DIR/.local/share/konsole/LambdaSolarized.colorscheme" ~/.local/share/konsole
+tmp_ln "$DOTFILES_DIR/.local/share/konsole/lambdaurora_profile.profile" ~/.local/share/konsole
 
 # Install configuration files for i3.
 echo "Installing i3 configuration files..."
