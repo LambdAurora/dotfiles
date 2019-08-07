@@ -1,11 +1,11 @@
 [Desktop Entry]
-DefaultProfile=LambdAurora Profile.profile
+DefaultProfile=lambdaurora.profile
 
 [Favorite Profiles]
-Favorites=LambdAurora Profile.profile
+Favorites=lambdaurora.profile
 
 [MainWindow]
-Height 1080=648
+Height 1080=294
 State=AAAA/wAAAAD9AAAAAAAAA48AAAJgAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
 Width 1920=1276
