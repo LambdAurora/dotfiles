@@ -45,7 +45,10 @@ mkdir -p ~/.config/compton
 tmp_ln "$DOTFILES_DIR/.config/compton/config" ~/.config/compton
 
 # Install KDE stuff.
-
+## Install konsole stuff.
+echo "Installing konsole configuration files..."
+tmp_ln "$DOTFILES_DIR/.config/konsolerc" ~/.config
+tmp_ln "$DOTFILES_DIR/.local/share/konsole/*" ~/.local/share/konsole
 
 # Install configuration files for i3.
 echo "Installing i3 configuration files..."
