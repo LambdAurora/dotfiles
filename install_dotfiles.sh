@@ -44,7 +44,7 @@ tmp_dir_ln "$DOTFILES_DIR/.vim/bundle/nerdtree/" ~/.vim/bundle
 echo "Installing Compton configuration files..."
 mkdir -p ~/.config/compton
 tmp_ln "$DOTFILES_DIR/.config/compton/config" ~/.config/compton
-tmp_ln "$DOTFILES_DIR/.lambdadotfiles/launch_compton.sh" ~/.config/autostart-scripts
+tmp_ln "$DOTFILES_DIR/.lambdadotfiles/launch_compton.sh" ~/.config/plasma-workspace/env
 
 # Install KDE stuff.
 ## Install konsole stuff.
