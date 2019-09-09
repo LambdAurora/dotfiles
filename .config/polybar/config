@@ -230,7 +230,7 @@ label = RAM %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp4s0
+interface = wlp1s0
 interval = 3.0
 
 format-connected-prefix = " "
