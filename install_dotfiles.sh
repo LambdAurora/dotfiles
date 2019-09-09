@@ -70,6 +70,11 @@ mkdir -p ~/.config/rofi
 tmp_ln "$DOTFILES_DIR/.config/rofi/config" ~/.config/rofi
 tmp_ln "$DOTFILES_DIR/.config/rofi/lambdaurora.rasi" ~/.config/rofi
 
+# Install configuration files for kitty.
+echo "Installing kitty configuration files..."
+mkdir -p ~/.config/kitty
+tmp_ln "$DOTFILES_DIR/.config/kitty/kitty.toml" ~/.config/kitty
+
 # Install Xresources files.
 echo "Installing some other configuration files..."
 tmp_ln "$DOTFILES_DIR/.Xdefaults" ~
