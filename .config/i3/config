@@ -66,6 +66,7 @@ bindsym $alt+F4 kill
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+r exec rofi -show run
 bindsym $mod+Tab exec rofi -show window
+bindsym $mod+Shift+Delete exec $HOME/.lambdadotfiles/rofi_powermenu.sh
 
 # Screenshots (flameshot)
 bindsym Control+Shift+apostrophe exec flameshot gui
