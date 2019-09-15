@@ -73,7 +73,7 @@ tmp_ln "$DOTFILES_DIR/.config/rofi/lambdaurora.rasi" ~/.config/rofi
 # Install configuration files for kitty.
 echo "Installing kitty configuration files..."
 mkdir -p ~/.config/kitty
-tmp_ln "$DOTFILES_DIR/.config/kitty/kitty.toml" ~/.config/kitty
+tmp_ln "$DOTFILES_DIR/.config/kitty/kitty.conf" ~/.config/kitty
 
 # Install Xresources files.
 echo "Installing some other configuration files..."
