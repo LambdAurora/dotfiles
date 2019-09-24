@@ -42,7 +42,7 @@ logs/
 
 # Languages
 ## Python
-__pychache__/
+__pycache__/
 ## Rust
 **/*.rs.bk
 
