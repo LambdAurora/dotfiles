@@ -19,4 +19,5 @@ alias gpull="git pull origin master"
 alias gpulldev="git pull origin dev"
 alias gdiff="git diff"
 alias rofi="~/.lambdadotfiles/plasma_rofi"
+alias wine64="$WINEPREFIX=\"$HOME/.wine64\" $WINEARCH=win64 wine"
 
