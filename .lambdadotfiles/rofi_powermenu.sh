@@ -1,13 +1,14 @@
 #!/bin/bash
 
 # Options
-power_off="  Power off"
-reboot="  Reboot"
-lock="Lock"
-suspend="  Suspend"
+power_off="⏻ Power off"
+reboot="🔄 Reboot"
+lock="🔒 Lock"
+suspend="🌙 Suspend"
 log_out="Log out"
+cancel="Cancel"
 
-options="$power_off\n$reboot\n$lock\n$suspend\n$log_out"
+options="$power_off\n$reboot\n$lock\n$suspend\n$log_out\n$cancel"
 
 chosen="$(echo -e "$options" | rofi -dmenu -selected-row 2)"
 case $chosen in
@@ -26,6 +27,8 @@ case $chosen in
         ;;
     $log_out)
         i3-msg exit
+        ;;
+    $cancel)
         ;;
 esac
 
