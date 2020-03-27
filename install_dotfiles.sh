@@ -39,6 +39,7 @@ mkdir -p ~/.vim/autoload
 tmp_ln "$DOTFILES_DIR/.vim/autoload/pathogen.vim" ~/.vim/autoload
 mkdir -p ~/.vim/bundle
 tmp_dir_ln "$DOTFILES_DIR/.vim/bundle/nerdtree/" ~/.vim/bundle
+tmp_dir_ln "$DOTFILES_DIR/.vim/pack/" ~/.vim
 
 # Install configuration files for Compton.
 echo "Installing Compton configuration files..."
