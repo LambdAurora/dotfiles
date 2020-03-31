@@ -24,7 +24,7 @@ background-alt = #CC444444
 foreground = #dfdfdf
 foreground-alt = #BDBDBD
 ;#555
-primary = #ffb52a
+primary = #ff9800
 secondary = #e60053
 alert = #bd2c40
 random = #FFA000
@@ -226,7 +226,7 @@ interval = 2
 format-prefix = "  "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
-label = RAM %percentage_used%%
+label = RAM %gb_used% (%percentage_used%%)
 
 [module/wlan]
 type = internal/network
@@ -282,7 +282,7 @@ interval = 1
 time = %H:%M:%S
 
 format-prefix = "  "
-format-prefix-foreground = ${colors.random}
+format-prefix-foreground = ${colors.primary}
 format-underline = #0a6cf5
 
 label = %time%
@@ -299,7 +299,7 @@ time = %H:%M:%S
 time-alt = %H:%M:%S
 
 format-prefix = "  "
-format-prefix-foreground = ${colors.random}
+format-prefix-foreground = ${colors.primary}
 format-underline = #0a6cf5
 
 label = %date%
