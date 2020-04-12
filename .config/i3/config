@@ -146,7 +146,7 @@ bindsym $mod+Shift+ccedilla move container to workspace $ws9
 bindsym $mod+Shift+agrave move container to workspace $ws10
 
 # Reload the configuration file.
-bindsym $mod+Shift+c reload
+bindsym $mod+Control+c reload
 # Restart i3 inplace (preserves your layout/session, can be used to upgrade i3).
 bindsym $mod+Shift+r restart
 # Exit i3 (logs you out of your X session).
@@ -177,4 +177,4 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bindsym $mod+Control+r mode "resize"
+bindsym $mod+Shift+r mode "resize"
