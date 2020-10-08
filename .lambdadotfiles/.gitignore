@@ -1,7 +1,7 @@
 #
 # LambdAurora's ignore file
 #
-# v0.14
+# v0.15
 
 # JetBrains
 .idea/
@@ -53,6 +53,8 @@ __pycache__/
 # OS
 ## Windows
 desktop.ini
+# MacOS
+.DS_Store
 
 # File types
 *.dll
