@@ -38,7 +38,6 @@ export LANG=en_US.UTF-8
 # else
 #   export EDITOR='mvim'
 # fi
-
 export EDITOR='vim'
 export GIT_EDITOR='vim'
 
@@ -60,8 +59,12 @@ then
 	export TERMINAL='gnome-terminal'
 fi
 
-# ssh
+## ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+## Java
+# Enable anti-aliased rendering for Swing applications.
+export JAVA_TOOL_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'
 
 ## Aliases
 . ~/.lambdadotfiles/aliases
