@@ -116,6 +116,10 @@ element alternate.active {
   text-color:       @alternate-active-foreground;
 }
 
+element-icon {
+  size: 2ch;
+}
+
 scrollbar {
   width:        4px;
   border:       0;
