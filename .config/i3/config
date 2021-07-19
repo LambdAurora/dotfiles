@@ -26,8 +26,8 @@ client.background		#FFFFFF
 exec_always --no-startup-id feh --bg-fill $HOME/.wallpapers/19-05-30--02-2.8_4k.png
 
 ###### i3-gaps
-gaps inner 10
-gaps outer -4
+gaps inner 8
+gaps outer -8
 
 # Smart borders (draws borders around container only if it is not the only container on this workspace)
 smart_borders on
