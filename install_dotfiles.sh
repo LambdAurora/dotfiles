@@ -69,7 +69,7 @@ tmp_ln "$DOTFILES_DIR/.config/polybar/launch.sh" ~/.config/polybar
 # Install configuration files for rofi.
 echo "Installing rofi configuration files..."
 mkdir -p ~/.config/rofi
-tmp_ln "$DOTFILES_DIR/.config/rofi/config" ~/.config/rofi
+tmp_ln "$DOTFILES_DIR/.config/rofi/config.rasi" ~/.config/rofi
 tmp_ln "$DOTFILES_DIR/.config/rofi/lambdaurora.rasi" ~/.config/rofi
 
 # Install configuration files for kitty.
