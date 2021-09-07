@@ -5,7 +5,7 @@
 
 * {
   red:                         rgba(220, 50, 47, 1);
-  primary:                     #FFA000;
+  primary:                     #f90;
   foreground:                  rgba(203, 210, 212, 1);
   faded-foreground:            rgba(149, 160, 163, 1);
   element-background:          rgba(238, 232, 213, 0);
@@ -114,6 +114,10 @@ element alternate.urgent {
 element alternate.active {
   background-color: @alternate-active-background;
   text-color:       @alternate-active-foreground;
+}
+
+element-text {
+  text-color: inherit;
 }
 
 element-icon {
