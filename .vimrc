@@ -188,11 +188,13 @@ set noswapfile
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use spaces instead of tabs
-set expandtab
+" Use tabs instead of spaces
+set noexpandtab
 
 " Be smart when using tabs ;)
 set smarttab
+set cindent
+set cinoptions=(0,u0,U0
 
 " 1 tab == 4 spaces
 set shiftwidth=4
@@ -205,6 +207,9 @@ set tabstop=4
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
+
+set list
+set listchars=tab:→\ ,space:·,nbsp:␣,trail:•
 
 
 """"""""""""""""""""""""""""""

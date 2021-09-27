@@ -7,3 +7,6 @@
 [submodule ".vim/bundle/vim-gradle"]
 	path = .vim/bundle/vim-gradle
 	url = git@github.com:davewongillies/vim-gradle.git
+[submodule ".vim/bundle/vim-stabs"]
+	path = .vim/bundle/vim-stabs
+	url = git@github.com:Thyrum/vim-stabs.git
