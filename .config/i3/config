@@ -51,10 +51,16 @@ set $ws9 "9"
 set $ws10 "10"
 
 #### Automatic software execution
+# For screen-locking
 exec_always --no-startup-id /usr/bin/light-locker
+# For composition
 exec_always --no-startup-id $HOME/.lambdadotfiles/launch_compton.sh
+# For polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id sudo xrandr --output HDMI-0 --primary --left-of DVI-D-0
+# For notifications
+exec_always --no-startup-id /usr/bin/dunst
+# Set a specific screen as primary
+exec_always --no-startup-id xrandr --output HDMI-0 --primary --left-of DVI-D-0
 
 ###### Shortcuts
 # Start a terminal.

@@ -66,6 +66,10 @@ mkdir -p ~/.config/polybar
 tmp_ln "$DOTFILES_DIR/.config/polybar/config" ~/.config/polybar
 tmp_ln "$DOTFILES_DIR/.config/polybar/launch.sh" ~/.config/polybar
 
+# Install configuration files for dunst.
+echo "Installing dunst configuration files..."
+tmp_dir_ln "$DOTFILES_DIR/.config/dunst" ~/.config
+
 # Install configuration files for rofi.
 echo "Installing rofi configuration files..."
 mkdir -p ~/.config/rofi
@@ -83,3 +87,4 @@ tmp_ln "$DOTFILES_DIR/.Xdefaults" ~
 tmp_ln "$DOTFILES_DIR/.xdefaults/" ~
 
 unalias tmp_ln
+unalias tmp_dir_ln
