@@ -51,6 +51,8 @@ set $ws9 "9"
 set $ws10 "10"
 
 #### Automatic software execution
+# Startup
+exec_always --no-startup-id $HOME/.lambdadotfiles/startup/startup.sh
 # For screen-locking
 exec_always --no-startup-id /usr/bin/light-locker
 # For composition
