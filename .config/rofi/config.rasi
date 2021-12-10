@@ -1,5 +1,6 @@
 configuration {
-    theme: "~/.config/rofi/lambdaurora.rasi";
     modi: "drun,run,window,ssh";
     show-icons: true;
 }
+
+@theme "~/.config/rofi/lambdaurora.rasi"
