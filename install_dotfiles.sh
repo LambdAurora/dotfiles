@@ -23,6 +23,7 @@ mkdir -p ~/.config/autostart-scripts
 tmp_ln "$DOTFILES_DIR/.config/redshift.conf" ~/.config
 tmp_ln "$DOTFILES_DIR/.lambdadotfiles/" ~
 tmp_ln -T "$DOTFILES_DIR/wallpapers/" ~/.wallpapers
+tmp_ln "$DOTFILES_DIR/.xprofile" ~
 
 # Install configuration files for the shell.
 echo "Installing zsh configuration files..."
