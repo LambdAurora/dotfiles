@@ -1,2 +1,2 @@
-#include ".xdefaults/urxvt.rc"
+#include "~/.xdefaults/urxvt.rc"
 
