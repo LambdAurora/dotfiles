@@ -1,2 +1,3 @@
 #include "~/.xdefaults/urxvt.rc"
+Xcursor.size: 24
 

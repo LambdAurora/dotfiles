@@ -1,2 +1,3 @@
 #!/bin/zsh
-# TODO
+
+source ~/.lambdadotfiles/startup/local/local.sh

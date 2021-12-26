@@ -11,7 +11,7 @@ do
 	if [[ $param == "--verbose" ]] || [[ $param == "-v" ]]
 	then
 		alias tmp_ln="ln -svf"
-        alias tmp_dir_ln="ln -svfd"
+		alias tmp_dir_ln="ln -svfd"
 	fi
 done
 
@@ -22,6 +22,8 @@ mkdir -p ~/.config
 mkdir -p ~/.config/autostart-scripts
 tmp_ln "$DOTFILES_DIR/.config/redshift.conf" ~/.config
 tmp_ln "$DOTFILES_DIR/.lambdadotfiles/" ~
+echo "#!/usr/bin/env zsh\n" > "$DOTFILES_DIR/.lambdadotfiles/startup/local/local.sh"
+chmod +x "$DOTFILES_DIR/.lambdadotfiles/startup/local/local.sh"
 tmp_ln -T "$DOTFILES_DIR/wallpapers/" ~/.wallpapers
 tmp_ln "$DOTFILES_DIR/.xprofile" ~
 

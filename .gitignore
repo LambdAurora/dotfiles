@@ -1,0 +1,2 @@
+.lambdadotfiles/startup/local/**
+!.lambdadotfiles/startup/local/.gitkeep
