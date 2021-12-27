@@ -22,8 +22,6 @@ client.unfocused		$bg		$bg			$color	$bg			$bg_in
 client.urgent			$bg		$bg			$color	$bg			$bg_in
 client.placeholder		$bg		$bg			$color	$bg			$bg_in
 client.background		#FFFFFF
-# Wallpapers
-exec_always --no-startup-id feh --bg-fill $HOME/.wallpapers/19-05-30--02-2.8_4k.png
 
 ###### i3-gaps
 gaps inner 8
@@ -52,7 +50,7 @@ set $ws10 "10"
 
 #### Automatic software execution
 # Startup
-exec_always --no-startup-id $HOME/.lambdadotfiles/startup/startup.sh
+exec_always --no-startup-id /usr/bin/zsh $HOME/.lambdadotfiles/startup/startup.sh
 # For screen-locking
 exec_always --no-startup-id /usr/bin/light-locker
 # For composition
