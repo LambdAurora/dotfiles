@@ -48,7 +48,7 @@ export CC="clang"
 export CXX="clang++"
 
 ## Wine
-export WINEARCH='win32'
+export WINEARCH='win64'
 
 ## Common
 export USER_HOME=$HOME

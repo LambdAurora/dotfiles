@@ -1,1 +1,2 @@
 export XDG_CURRENT_DESKTOP=kde
+export WINE_ARCH=win64
