@@ -1,3 +1,4 @@
+#!/bin/zsh
 ############################################################
 ############################################################
 ###                                                      ###
@@ -5,6 +6,22 @@
 ###                                                      ###
 ############################################################
 ############################################################
+
+function git() {
+	if [ "$1" = tag -a "$2" = rename ]; then
+		shift
+		shift
+		local old_name="$1"
+		local new_name="$2"
+		shift
+		shift
+		set -- "$new_name" "$old_name" "$@"
+		git tag "$@" && git tag -d "$old_name"
+		return;
+	fi
+
+	command git "$@"
+}
 
 alias cls="clear"
 alias home="cd ~"
@@ -21,4 +38,3 @@ alias gpullfork="git pull origin fork"
 alias gdiff="git diff"
 alias rofi="~/.lambdadotfiles/plasma_rofi"
 alias wine32="WINEPREFIX=\"$HOME/.wine32\" WINEARCH=win32 wine"
-
