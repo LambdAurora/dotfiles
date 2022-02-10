@@ -58,9 +58,10 @@ font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 font-3 = Inconsolata:pixelsize=10;1
-font-4 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
-font-5 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
-font-6 = "Font Awesome 5 Brands:pixelsize=10;1"
+font-4 = "Font Awesome 6 Free:style=Regular:pixelsize=10;1"
+font-5 = "Font Awesome 6 Free:style=Solid:pixelsize=10;1"
+font-6 = "Font Awesome 6 Brands:pixelsize=10;1"
+font-7 = "Fira Code:pixelsize=10;1"
 
 modules-left = bspwm i3
 modules-center = xwindow clock date 
@@ -95,7 +96,7 @@ format-prefix-underline = ${colors.secondary}
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-prefix-underline = ${colors.secondary}
 
