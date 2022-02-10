@@ -16,6 +16,12 @@
     <option name="SPACE_AFTER_REFERENCE_IN_DECLARATION" value="true" />
     <option name="GENERATE_COMPARISON_OPERATORS_USE_STD_TIE" value="true" />
   </Objective-C>
+  <codeStyleSettings language="CMake">
+    <indentOptions>
+      <option name="USE_TAB_CHARACTER" value="true" />
+      <option name="SMART_TABS" value="true" />
+    </indentOptions>
+  </codeStyleSettings>
   <codeStyleSettings language="CSS">
     <indentOptions>
       <option name="USE_TAB_CHARACTER" value="true" />
@@ -56,6 +62,10 @@
     <option name="BLANK_LINES_BEFORE_IMPORTS" value="0" />
     <option name="BLANK_LINES_AFTER_IMPORTS" value="0" />
     <option name="CLASS_BRACE_STYLE" value="2" />
+    <indentOptions>
+      <option name="USE_TAB_CHARACTER" value="true" />
+      <option name="SMART_TABS" value="true" />
+    </indentOptions>
   </codeStyleSettings>
   <codeStyleSettings language="TOML">
     <indentOptions>
