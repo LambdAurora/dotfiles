@@ -46,10 +46,10 @@ tmp_dir_ln "$DOTFILES_DIR/.vim/bundle/vim-gradle/" ~/.vim/bundle
 tmp_dir_ln "$DOTFILES_DIR/.vim/pack/" ~/.vim
 
 # Install configuration files for Compton.
-echo "Installing Compton configuration files..."
-mkdir -p ~/.config/compton
-tmp_ln "$DOTFILES_DIR/.config/compton/config" ~/.config/compton
-tmp_ln "$DOTFILES_DIR/.lambdadotfiles/launch_compton.sh" ~/.config/plasma-workspace/env
+echo "Installing Picom configuration files..."
+mkdir -p ~/.config/picom
+tmp_ln "$DOTFILES_DIR/.config/picom/picom.conf" ~/.config/picom
+tmp_ln "$DOTFILES_DIR/.lambdadotfiles/launch_picom.sh" ~/.config/plasma-workspace/env
 
 # Install KDE stuff.
 ## Install konsole stuff.
