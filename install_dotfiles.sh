@@ -20,6 +20,7 @@ done
 echo "Installing common dotfiles..."
 mkdir -p ~/.config
 mkdir -p ~/.config/autostart-scripts
+mkdir -p ~/.config/systemd/user
 tmp_ln "$DOTFILES_DIR/.config/redshift.conf" ~/.config
 tmp_ln "$DOTFILES_DIR/.lambdadotfiles/" ~
 echo "#!/usr/bin/env zsh\n" > "$DOTFILES_DIR/.lambdadotfiles/startup/local/local.sh"
@@ -63,6 +64,7 @@ tmp_ln "$DOTFILES_DIR/.local/share/konsole/lambdaurora.profile" ~/.local/share/k
 echo "Installing i3 configuration files..."
 mkdir -p ~/.config/i3
 tmp_ln "$DOTFILES_DIR/.config/i3/config" ~/.config/i3
+tmp_ln "$DOTFILES_DIR/.config/systemd/user/plasma_i3.service" ~/.config/systemd/user
 
 # Install configuration files for polybar.
 mkdir -p ~/.config/polybar
