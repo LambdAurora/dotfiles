@@ -69,6 +69,11 @@ export JAVA_TOOL_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true'
 ## Aliases
 . ~/.lambdadotfiles/aliases.sh
 
+## Local stuff
+if [ -e ~/.lambdadotfiles/local/.zshrc ]; then
+	. ~/.lambdadotfiles/local/.zshrc;
+fi
+
 [[ "$DISPLAY" && -z "$de" ]] && type -p xprop &>/dev/null && de="$(xprop -root | awk '/KDE_SESSION_VERSION/')"
 
 case $de in
