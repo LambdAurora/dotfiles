@@ -59,8 +59,6 @@ exec_always --no-startup-id $HOME/.lambdadotfiles/launch_compton.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # For notifications
 exec_always --no-startup-id /usr/bin/dunst
-# Set a specific screen as primary
-exec_always --no-startup-id xrandr --output HDMI-0 --primary --left-of DVI-D-0
 
 ###### Shortcuts
 # Start a terminal.
@@ -208,6 +206,8 @@ for_window [class="Plasmoidviewer"] floating enable; border none
 for_window [class="(?i)*nextcloud*"] floating disable
 for_window [class="plasmashell" window_type="notification"] border none, move right 700px, move down 450px
 no_focus [class="plasmashell" window_type="notification"]
+for_window [class="Galculator" instance="galculator"] floating enable
+for_window [class="steam_app_1167630"] floating enable
 
 ## English only!
 for_window [title="Desktop — Plasma"] kill, floating enable, border none
