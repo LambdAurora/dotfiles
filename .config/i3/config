@@ -210,4 +210,7 @@ for_window [class="Galculator" instance="galculator"] floating enable
 for_window [class="steam_app_1167630"] floating enable
 
 ## English only!
+### For Plasma >=5.27
+for_window [title="Desktop @ QRect.*"] kill; floating enable; border none
+### For Plasma <5.27
 for_window [title="Desktop — Plasma"] kill, floating enable, border none
