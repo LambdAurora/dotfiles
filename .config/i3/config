@@ -54,7 +54,7 @@ exec_always --no-startup-id /usr/bin/zsh $HOME/.lambdadotfiles/startup/startup.s
 # For screen-locking
 exec_always --no-startup-id /usr/bin/light-locker
 # For composition
-exec_always --no-startup-id $HOME/.lambdadotfiles/launch_compton.sh
+exec_always --no-startup-id $HOME/.lambdadotfiles/launch_compton.sh &
 # For polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # For notifications
