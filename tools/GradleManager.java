@@ -35,7 +35,7 @@ public class GradleManager {
 
 		switch (command) {
 			case "help" -> help();
-			case "list" -> listGradles();
+			case "status" -> statusGradles();
 			case "install" -> {
 				if (args.length < 2) {
 					System.err.println("Please provide a version to install.");
@@ -50,6 +50,16 @@ public class GradleManager {
 			}
 			case "uninstall" -> {
 			}
+			case "use" -> {
+				if (args.length < 2) {
+					System.err.println("Please provide a version to use.");
+					help();
+					return;
+				}
+
+				String version = args[1];
+				use(version);
+			}
 		}
 	}
 
@@ -62,7 +72,7 @@ public class GradleManager {
 
 				Commands:
 					* help - Shows this help message.
-					* list - Lists existing Gradle installations.
+					* status - Lists existing Gradle installations and enabled one.
 					* install <version> [--bin] - Installs the specified Gradle version.
 					* uninstall <version> - Uninstalls the specified Gradle version.
 					* use <version> - Set the default version to use for Gradle.
@@ -73,15 +83,16 @@ public class GradleManager {
 		return Paths.get("/opt/gradle").toAbsolutePath().normalize();
 	}
 
-	static void listGradles() {
+	static void statusGradles() {
 		try {
 			var installations = getGradleInstallations();
 
-			System.out.println("Existing installations: " + 
-					installations.stream()
-						.map(gradle -> gradle.name + (gradle.bin ? " (bin)" : ""))
-						.collect(Collectors.joining(", "))
-			);
+			System.out.println("Available Gradle environments: ");
+			installations.forEach(gradle -> {
+				boolean isDefault = gradle.isDefault();
+				String color = isDefault ? "\u001b[36;1m" : "";
+				System.out.println("  " + color + gradle.fancyName() + (isDefault ? " (default)" : "") + "\u001b[0m");
+			});
 		} catch (IOException e) {
 			System.err.println("Could not fetch Gradle installations.");
 			e.printStackTrace();
@@ -96,7 +107,7 @@ public class GradleManager {
 				System.out.println("This version is already installed, nothing to do!");
 				return;
 			}
-			
+
 			System.out.println("Installing Gradle " + version + (bin ? " (bin only)" : "") + "...");
 
 			var rootPath = getGradleRootPath();
@@ -118,7 +129,7 @@ public class GradleManager {
 
 					final float currentProgress = ((float) downloadedSize) / downloadSize * 100.f;
 
-					System.out.printf("Downloading archive file... %5.1f%%\r", currentProgress);
+					System.out.printf("Downloading archive file... \u001b[36;1m%5.1f%%\u001b[0m\r", currentProgress);
 
 					os.write(data, 0, len);
 				}
@@ -132,7 +143,6 @@ public class GradleManager {
 
 			try (var zis = new ZipInputStream(Files.newInputStream(zipPath))) {
 				var entry = zis.getNextEntry();
-
 
 				while (entry != null) {
 					var destPath = getExtractedPath(installationDir, entry);
@@ -160,6 +170,36 @@ public class GradleManager {
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
+			System.exit(1);
+		}
+	}
+
+	static void use(String version) {
+		try {
+			var installation = getGradleInstallations().stream()
+					.filter(gradle -> gradle.name().equals(version))
+					.findFirst();
+
+			if (installation.isEmpty()) {
+				System.err.println("\u001b[31;1mCannot use " + version + " as default version because it does not exist.\u001b[0m");
+				System.exit(1);
+			}
+
+			if (installation.get().isDefault()) {
+				System.out.println("\u001b[33;1mGradle " + installation.get().fancyName() + " is already the default environment.\u001b[0m");
+			}
+
+			var defaultPath = getGradleRootPath().resolve("default");
+
+			if (Files.isSymbolicLink(defaultPath)) {
+				Files.delete(defaultPath);
+			}
+
+			Files.createSymbolicLink(defaultPath, installation.get().path());
+			System.out.println("\u001b[32;1mGradle " + installation.get().fancyName() + " has been set as the default environment.\u001b[0m");
+		} catch (IOException e) {
+			e.printStackTrace();
+			System.exit(1);
 		}
 	}
 
@@ -173,7 +213,7 @@ public class GradleManager {
 		}
 
 		if (!destPath.toAbsolutePath().startsWith(destDir))
-			throw new IOException("Entry is outside of the target directory: "+ entry.getName());
+			throw new IOException("Entry is outside of the target directory: " + entry.getName());
 
 		return destPath;
 	}
@@ -183,9 +223,9 @@ public class GradleManager {
 		List<Installation> list = null;
 
 		try (var stream = Files.list(root)) {
-			list = stream.filter(path -> path.getFileName().toString().matches("^\\d\\.\\d(-bin)?$"))
-				.map(Installation::fromPath)
-				.toList();
+			list = stream.filter(path -> path.getFileName().toString().matches("^\\d\\.\\d(?:\\.\\d)?(-bin)?$"))
+					.map(Installation::fromPath)
+					.toList();
 		}
 
 		if (list == null) {
@@ -201,6 +241,21 @@ public class GradleManager {
 			boolean bin = fileName.endsWith("-bin");
 
 			return new Installation(bin ? fileName.replaceAll("-bin$", "") : fileName, path, bin);
+		}
+
+		public String fancyName() {
+			return this.name + (this.bin ? " (bin)" : "");
+		}
+
+		public boolean isDefault() {
+			Path defaultDistribution = getGradleRootPath().resolve("default");
+
+			try {
+				Path defaultPath = Files.readSymbolicLink(defaultDistribution).toAbsolutePath().normalize();
+				return this.path.toAbsolutePath().normalize().equals(defaultPath);
+			} catch (IOException e) {
+				return false;
+			}
 		}
 	}
 }
