@@ -46,7 +46,7 @@ tmp_dir_ln "$DOTFILES_DIR/.vim/bundle/nerdtree/" ~/.vim/bundle
 tmp_dir_ln "$DOTFILES_DIR/.vim/bundle/vim-gradle/" ~/.vim/bundle
 tmp_dir_ln "$DOTFILES_DIR/.vim/pack/" ~/.vim
 
-# Install configuration files for Compton.
+# Install configuration files for Picom.
 echo "Installing Picom configuration files..."
 mkdir -p ~/.config/picom
 tmp_ln "$DOTFILES_DIR/.config/picom/picom.conf" ~/.config/picom

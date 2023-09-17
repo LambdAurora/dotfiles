@@ -53,6 +53,7 @@ export WINEARCH='win64'
 
 ## Common
 export USER_HOME=$HOME
+export GPG_TTY=$(tty)
 
 # Check if gnome-terminal exists, if it exists it will define $TERMINAL variable.
 if (( $+commands[gnome-terminal] ))
