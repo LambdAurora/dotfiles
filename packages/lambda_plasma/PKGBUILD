@@ -1,0 +1,78 @@
+pkgname=lambda_plasma
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Packages to set-up a Plasma-based environment."
+arch=("any")
+depends=(
+	lambda_base
+	lambda_audio
+
+	# Login screen
+	sddm
+	sddm-kcm # For config
+
+	# KDE
+	plasma-meta
+	kdeconnect
+	kde-graphics-meta
+	wacomtablet
+	## KDE utilities
+	ark
+	filelight
+	#- francis
+	#- isoimagewriter
+	#- kalk
+	#- kalm
+	kate
+	kbackup
+	kcalc
+	kcharselect
+	kclock
+	kdebugsettings
+	kdf
+	kdialog
+	#- keditbookmarks
+	#- keysmith
+	kfind
+	kgpg
+	#- kongress
+	#- konsole ; replaced by kitty
+	krecorder
+	#- kteatime
+	#- ktimer
+	#- ktrip
+	kwalletmanager
+	kweather
+	markdownpart
+	skanpage
+	sweeper
+	#- telly-skout
+	#- yakuake
+
+	# Fonts
+	noto-fonts
+	noto-fonts-cjk
+	noto-fonts-emoji
+	ttf-fira-code
+
+	rofi
+
+	# General Applications
+	kitty
+	thunar
+	firefox
+	gvfs # For thunar
+	flameshot
+	krita
+	code
+	libreoffice-still
+
+	# Spellcheckers
+	hunspell
+	hunspell-en_us
+	hunspell-fr
+
+	# Video/Audio Playback
+	mpv
+	vlc
+)

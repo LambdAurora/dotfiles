@@ -1,0 +1,30 @@
+pkgname=lambda_base
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Base system packages."
+arch=("any")
+depends=(
+	lambda_core
+
+	linux
+	linux-firmware
+
+	man-db
+	man-pages
+
+	doas
+	zsh-completions
+	htop
+
+	vim
+
+	# Filesystem
+	ntfs-3g
+	mtpfs
+
+	# Networking
+	networkmanager
+
+	# Multimedia
+	ffmpeg
+)

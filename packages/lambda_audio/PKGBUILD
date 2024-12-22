@@ -1,0 +1,13 @@
+pkgname=lambda_audio
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Audio-related packages."
+arch=("any")
+depends=(
+	lambda_base
+
+	pipewire
+	pipewire-pulse
+	pipewire-jack
+	wireplumber
+)

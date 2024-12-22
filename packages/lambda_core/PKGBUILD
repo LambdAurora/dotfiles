@@ -1,0 +1,20 @@
+pkgname=lambda_core
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Core system packages."
+arch=("any")
+depends=(
+	base
+	base-devel
+	zsh
+	rsync
+
+	git
+	cmake
+	clang
+
+	# Filesystem
+	fuse2
+	fuse3
+	fuse2fs
+)

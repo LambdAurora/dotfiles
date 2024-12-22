@@ -1,0 +1,11 @@
+#!/usr/bin/env zsh
+export PACMAN_AUTH=doas
+
+cd lambda_core
+makepkg -si
+cd ../lambda_base
+makepkg -si
+cd ../lambda_audio
+makepkg -si
+cd ../lambda_plasma
+makepkg -si
