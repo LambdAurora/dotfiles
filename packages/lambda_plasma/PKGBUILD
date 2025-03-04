@@ -59,13 +59,16 @@ depends=(
 
 	# General Applications
 	kitty
-	thunar
 	firefox
 	gvfs # For thunar
 	flameshot
 	krita
-	code
 	libreoffice-still
+	peek
+
+	## File Manager
+	thunar
+	tumbler # For thumbnails
 
 	# Spellcheckers
 	hunspell
