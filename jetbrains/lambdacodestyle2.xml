@@ -5,6 +5,9 @@
     <option name="HTML_UNIFORM_INDENT" value="true" />
   </HTMLCodeStyleSettings>
   <JSCodeStyleSettings version="0">
+    <option name="FORCE_SEMICOLON_STYLE" value="true" />
+    <option name="FORCE_QUOTE_STYlE" value="true" />
+    <option name="ENFORCE_TRAILING_COMMA" value="WhenMultiline" />
     <option name="SPACES_WITHIN_IMPORTS" value="true" />
   </JSCodeStyleSettings>
   <JavaCodeStyleSettings>
@@ -29,6 +32,9 @@
     <option name="GENERATE_COMPARISON_OPERATORS_USE_STD_TIE" value="true" />
   </Objective-C>
   <TypeScriptCodeStyleSettings version="0">
+    <option name="FORCE_SEMICOLON_STYLE" value="true" />
+    <option name="FORCE_QUOTE_STYlE" value="true" />
+    <option name="ENFORCE_TRAILING_COMMA" value="WhenMultiline" />
     <option name="SPACES_WITHIN_IMPORTS" value="true" />
   </TypeScriptCodeStyleSettings>
   <codeStyleSettings language="CMake">
