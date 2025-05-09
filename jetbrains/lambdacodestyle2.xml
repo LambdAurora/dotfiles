@@ -90,6 +90,7 @@
   </codeStyleSettings>
   <codeStyleSettings language="JavaScript">
     <option name="CLASS_BRACE_STYLE" value="2" />
+    <option name="KEEP_SIMPLE_METHODS_IN_ONE_LINE" value="true" />
     <indentOptions>
       <option name="USE_TAB_CHARACTER" value="true" />
     </indentOptions>
@@ -140,6 +141,7 @@
     </indentOptions>
   </codeStyleSettings>
   <codeStyleSettings language="TypeScript">
+    <option name="KEEP_SIMPLE_METHODS_IN_ONE_LINE" value="true" />
     <indentOptions>
       <option name="USE_TAB_CHARACTER" value="true" />
     </indentOptions>
